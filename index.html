@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accès privé</title>
+  <style>
+    body {
+      background: #0b0b0b;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      text-align: center;
+    }
+    input {
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 12px;
+      margin-top: 10px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>🔒 Accès sécurisé</h1>
+  <input type="password" id="code" placeholder="Entrer le code">
+  <br>
+  <button onclick="verifier()">Entrer</button>
+  <p id="message"></p>
+</div>
+
+<script>
+function verifier() {
+  var code = document.getElementById("code").value;
+
+  if(code === "TITAN2026") {
+    window.location.href = "https://sites.google.com/view/shoolid/cours-enseign%C3%A9s?authuser=0";
+  } else {
+    document.getElementById("message").innerText = "Code incorrect";
+  }
+}
+</script>
+
+</body>
+</html>
